@@ -14,7 +14,6 @@ import xarray as xr
 import matplotlib.pyplot as plt
 import pickle
 from scipy.interpolate import interpn
-import cv2
 
 
 def pipe(inp, fns):

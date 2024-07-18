@@ -697,7 +697,7 @@ def eval_ose(path_alongtrack,
     return leaderboard_nrmse, int(learderboard_psds_score)
 
 # plot results
-def plot_results(RMSE_array, save_name=None):
+def plot_results(RMSE_array, save_name=None, your_year='2017'):
     x_7days = range(7)
     x_8days = range(-1, 7)
     x_glo_persistence = range(5)
@@ -738,11 +738,11 @@ def plot_results(RMSE_array, save_name=None):
 
     ax.plot(x_7days,
             y_4dvarnet[13:],
-            label="4DVarNet",
+            label="4DVarNet - 2017",
             color='blue')
     ax.plot(x_7days,
             RMSE_array,
-            label="4DVarNet trained on GLORYS",
+            label="4DVarNet trained on GLORYS - {}".format(your_year),
             color='red',)
     """ax.plot(x_7days,
             y_4dvarnet_mapping * np.ones_like(x_7days),
@@ -751,7 +751,7 @@ def plot_results(RMSE_array, save_name=None):
             linestyle='dashed')"""
     ax.plot(x_7days,
             y_glo[:7],
-            label="Glo",
+            label="Glo - 2017",
             color='green')
     """ax.plot(x_glo_persistence,
             y_glo_persistence,
@@ -760,12 +760,12 @@ def plot_results(RMSE_array, save_name=None):
             linestyle='dashdot')"""
     ax.plot(x_7days,
             y_glorys * np.ones_like(x_7days),
-            label="Glorys",
+            label="Glorys - 2017",
             color='green',
             linestyle='dashed')
     ax.plot(x_7days,
             y_oi * np.ones_like(x_7days),
-            label="Duacs mapping",
+            label="Duacs mapping - 2017",
             color='orange',
             linestyle='dashed')
     """ax.plot(x_7days,

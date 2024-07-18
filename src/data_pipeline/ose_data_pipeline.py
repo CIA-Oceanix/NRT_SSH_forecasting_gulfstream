@@ -6,6 +6,7 @@ import ocn_tools._src.geoprocessing.gridding as ocngrid
 import pandas as pd
 import xarray as xr
 import numpy as np
+import typing
 
 def dl_output_validation(
     download_dir: str,
@@ -32,7 +33,7 @@ def download_copernicus_data_for_sat(
     download_dir: str = "data/downloads/${.sat}",
     min_time: str = "2022-01-01",
     max_time: str = "2022-12-31",
-    regex: str = None,
+    regex: typing.Optional[str] = None,
     copernicus_dataset_id="cmems_obs-sl_glo_phy-ssh_nrt_{}-l3-duacs_PT1S",
     _skip_val: bool = False,
     ):
@@ -221,6 +222,7 @@ def grid_input(
     max_time: str = "2022-12-31",
     degrees: float = 0.083
 ):
+    Path(output_path).parent.mkdir(exist_ok=True, parents=True)
     ocngrid.coord_based_to_grid(
             coord_based_ds=xr.open_dataset(input_path),
             target_grid_ds=xr.Dataset(
