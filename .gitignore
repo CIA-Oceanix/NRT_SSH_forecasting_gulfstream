@@ -1,4 +1,6 @@
 **/__pycache__
 data/*
+!data/concat/
+!data/gridded/
 rec_dir/*
 results/*

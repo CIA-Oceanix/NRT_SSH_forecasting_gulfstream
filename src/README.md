@@ -13,6 +13,8 @@ The two notebooks situated at the root of this github that can be used to reprod
 Use [the data pipeline notebook](../ose_data_pipeline.ipynb) in order to **download** and **pre-process** your desired data.
 This notebook uses files situated in the [data](data) folder.
 
+*2023 NRT and reprocessed altimetry data is already baked into this repository in the [data folder](../data/), which lets you skip this step altogether if you don't need to reproduce the results for different data*
+
 ## 2nd step: Using your trained 4DVarNet model and computing results
 
 Use [the results reproducing notebook](../reproduce_glorys_ose_results.ipynb) in order to apply your **trained model** on the OSE data obtained during the **1st step**.
