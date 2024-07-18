@@ -14,6 +14,8 @@ Performing forecasts on recent NRT (Near Real-Time) SSH (Seas Surface Height) da
 
 The code used for experiments and its description can be can be found in the [src folder](src/).
 
+If you mean to use this notebook, dependencies and explanations are situated in this folder as well.
+
 ## First experiment: Glorys12 training
 
 The model used is **4DVarNet**-forecast trained on **Glorys12** data over a period of 10 years (2010-2019).
